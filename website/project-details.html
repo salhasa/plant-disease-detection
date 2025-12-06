@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Details – PlantZone</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+    <div class="logo">
+        <span class="leaf">🌿</span>
+        <span>Predicting Plant Diseases</span>
+    </div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/classifier">Classifier</a>
+    </nav>
+</header>
+
+<main class="page" style="padding: 3rem 6rem;">
+
+    <!-- Header Section -->
+    <section class="hero-content" style="max-width: 850px; margin: 0 auto;">
+        <div class="hero-badge">🌱 Project Information</div>
+
+        <h1 class="hero-title" style="font-size: 2.4rem;">
+            Project Details
+        </h1>
+
+        <p class="hero-subtitle">
+            Overview of the graduation project, model development process, and how the classification system works.
+        </p>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="feature-grid"
+             style="display: grid; gap: 2rem; margin-top: 3rem;
+                    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));">
+
+        <!-- Card 1 -->
+        <div class="feature-card">
+            <h3>Graduation Project – University of Jeddah</h3>
+            <p>
+                This project was developed by <strong>Data Science students from the University of Jeddah</strong>,
+                under the supervision of <strong>Dr. Heba Fasihuddin</strong>.
+            </p>
+            <p>
+                The system aims to support plant health monitoring by providing an AI tool that
+                analyzes leaf images and predicts the presence of plant diseases with high accuracy.
+            </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="feature-card">
+            <h3>Model Development & Selection</h3>
+            <p>
+                Several deep learning models were trained and tested, including
+                <strong>GoogLeNet</strong>, <strong>YOLO models</strong>, and <strong>MobileNetV3</strong>.
+            </p>
+            <p>
+                After experimenting with multiple architectures, feature tuning,
+                and performance comparisons, two models were selected:
+                <strong>MobileNetV3-Large</strong> and <strong>YOLOv11</strong>.
+            </p>
+            <p>
+                These models achieved the highest scores across accuracy, precision,
+                recall, and F1-score, making them the most reliable choices for deployment.
+            </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="feature-card">
+            <h3>How the Web System Works</h3>
+            <p>
+                The user uploads an image of a plant leaf through the website interface.
+            </p>
+            <p>
+                The image is processed and passed to both deployed models:
+                <strong>MobileNetV3-Large</strong> and <strong>YOLOv11</strong>.
+            </p>
+            <p>
+                Each model predicts the disease type (or healthy condition) based on training data.
+                The system then displays the final classification result to the user,
+                showing the detected disease name and health status.
+            </p>
+        </div>
+
+    </section>
+
+</main>
+
+</body>
+</html>

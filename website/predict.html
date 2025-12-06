@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PlantZone – Classifier</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+     <div class="logo">
+    <span class="leaf">🌿</span> Predicting Plant Diseases
+</div>
+
+        <nav>
+            <a href="/">Home</a>
+            <a href="/classifier" class="active">Classifier</a>
+        </nav>
+    </header>
+
+    <!-- Classifier Page -->
+    <div class="container">
+        
+        <h1 class="page-title">Upload a plant image</h1>
+        <p class="page-subtitle">
+            Select a leaf image from your device. The backend will run it through two pre-trained models and return both predictions.
+        </p>
+
+        <div class="upload-box">
+            <input type="file" id="imageUpload" accept="image/*">
+        </div>
+
+        <div class="upload-actions">
+            <button class="primary-btn classify-btn" onclick="sendImage()">Classify image</button>
+        </div>
+
+        <!-- Results for two models -->
+        <div id="results" class="results-grid" style="display: none;">
+
+            <div class="model-card">
+                <h3 class="model-title">YOLOv11 Classification</h3>
+                <p><strong>Class:</strong> <span id="yolo-class"></span></p>
+                <p><strong>Health:</strong> <span id="yolo-health"></span></p>
+            </div>
+
+            <div class="model-card">
+                <h3 class="model-title">MobileNetV3-Large</h3>
+                <p><strong>Class:</strong> <span id="mobile-class"></span></p>
+                <p><strong>Health:</strong> <span id="mobile-health"></span></p>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
