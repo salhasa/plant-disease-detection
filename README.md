@@ -1,4 +1,4 @@
-# Plant Disease Detection and Classification
+# Plant Disease classification 
 
 This project applies multiple deep learning architectures to classify plant diseases using the PlantVillage dataset. The models were trained, evaluated, and compared using performance metrics, learning curves, confusion matrices, and ROC curves.
 
